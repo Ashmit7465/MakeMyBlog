@@ -172,6 +172,6 @@ export class Service {
   }
 }
 
-const service = new Service();
+const authService = new Service();
 
-export default Service;
+export default authService;
