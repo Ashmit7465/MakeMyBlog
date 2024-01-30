@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from '../Logo'
+import Logo from "../Logo";
 
 function Footer() {
   return (
@@ -13,8 +13,8 @@ function Footer() {
                 <Logo width="100px" />
               </div>
               <div>
-                <p className="text-sm text-gray-600">
-                  &copy; Copyright 2023. All Rights Reserved by DevUI.
+                <p className="text-sm text-gray-600 font-bold">
+                  &copy; Copyright 2023. All Rights Reserved by Ashmit Shukla.
                 </p>
               </div>
             </div>

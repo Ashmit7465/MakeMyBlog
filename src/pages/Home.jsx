@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import appwriteService from "../appwrite/config";
 import { Container, PostCard } from "../components";
 
@@ -9,32 +8,28 @@ function Home() {
   useEffect(() => {
     appwriteService.getPosts().then((posts) => {
       if (posts) {
-        setPosts(posts.document);
+        setPosts(posts.documents);
       }
     });
   }, []);
 
   if (posts.length === 0) {
     return (
-      <div class="w-[300px] rounded-md border">
-        <img
-          src="https://www.shutterstock.com/image-photo/blog-blogging-homepage-social-media-600nw-381746308.jpg"
-          alt="Laptop"
-          class="h-[200px] w-full rounded-md object-cover"
-        />
-        <div class="p-4">
-          <h1 class="text-lg font-semibold">
-            .....Please Login to Read Posts.....
-          </h1>
-          <p class="mt-3 text-sm text-gray-600">
-            Use the 'Login' button to start reading posts or to post your own
-            posts.
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-7">!! Welcome to MakeMyBlog !!</h1>
+          <p className="text-3xl font-bold mb-6">Please login to read others' posts or to create your own new post</p>
+          <p className="text-xl mb-4">
+          If even after login you don't see any posts, then maybe there are no
+            posts, so add your own post.
+          </p>
+          <p className="mb-4">
+            
           </p>
         </div>
       </div>
     );
   }
-
   return (
     <div className="w-full py-8">
       <Container>
@@ -42,7 +37,6 @@ function Home() {
           {posts.map((post) => (
             <div key={post.$id} className="p-2 w-1/4">
               <PostCard {...post} />
-              {/* <PostCard post={post}/> */}
             </div>
           ))}
         </div>

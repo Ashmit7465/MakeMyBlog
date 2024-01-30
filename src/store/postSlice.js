@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// I never used it in the project
+
 const initialState = {
   posts: [],
   selectedPost: null,
