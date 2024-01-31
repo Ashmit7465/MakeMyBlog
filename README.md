@@ -1,5 +1,7 @@
 # MakeMyBlog - React JS + Appwrite Blog App
 
+Deployed : - https://make-my-blog.vercel.app/
+
 MakeMyBlog is a React JS application that serves as a simple blog app. It utilizes the authentication service, database, and bucket service from Appwrite. The app incorporates features like real-time editing using TinyMCE, React Router for navigation, React Hook Form for form handling, Redux Toolkit and React-Redux for state management, and Tailwind CSS for styling.
 
 ## Features
