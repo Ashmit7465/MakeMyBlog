@@ -20,43 +20,39 @@ export default function PostForm({ post }) {
   const userData = useSelector((state) => state.auth.userData);
 
   const submit = async (data) => {
-    if (post) {
-      const file = data.image && data.image[0]
-        ? await appwriteService.uploadFile(data.image[0])
-        : null;
-  
+    let fileId;
+    if (data.image && data.image[0]) {
+      const file = await appwriteService.uploadFile(data.image[0]);
       if (file) {
-        appwriteService.deleteFile(post.featuredImage);
+        fileId = file.$id;
+        if (post && post.featuredImage) {
+          appwriteService.deleteFile(post.featuredImage);
+        }
       }
-  
-      const dbPost = await appwriteService.updatePost(post.$id, {
-        ...data,
-        featuredImage: file ? file.$id : undefined,
-      });
-  
+    }
+
+    const postData = {
+      ...data,
+      featuredImage: fileId || undefined,
+    };
+
+    if (post) {
+      const dbPost = await appwriteService.updatePost(post.$id, postData);
+
       if (dbPost) {
         navigate(`/post/${dbPost.$id}`);
       }
     } else {
-      const file = data.image && data.image[0]
-        ? await appwriteService.uploadFile(data.image[0])
-        : null;
-  
-      if (file) {
-        const fileId = file.$id;
-        data.featuredImage = fileId;
-        const dbPost = await appwriteService.createPost({
-          ...data,
-          userId: userData.$id,
-        });
-  
-        if (dbPost) {
-          navigate(`/post/${dbPost.$id}`);
-        }
+      const dbPost = await appwriteService.createPost({
+        ...postData,
+        userId: userData.$id,
+      });
+
+      if (dbPost) {
+        navigate(`/post/${dbPost.$id}`);
       }
     }
   };
-  
 
   const slugTransform = useCallback((value) => {
     if (value && typeof value === "string")
