@@ -27,10 +27,11 @@ Follow the steps below to download and run the project locally:
 REACT_APP_APPWRITE_ENDPOINT=https://your-appwrite-endpoint/api
 REACT_APP_APPWRITE_PROJECT_ID=your-appwrite-project-id
 REACT_APP_APPWRITE_API_KEY=your-appwrite-api-key
+```
 
 
-4. ```bash
-   npm run dev
+4. npm run dev
+
 
 5. Open your browser and navigate to localhost view the app
 
