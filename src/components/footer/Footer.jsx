@@ -14,39 +14,41 @@ function Footer() {
               </div>
               <div>
                 <p className="text-sm text-gray-600 font-bold">
-                  &copy; Copyright 2023. All Rights Reserved by Ashmit Shukla.
+                  &copy; Copyright 2024. All Rights Reserved by <a href="https://www.linkedin.com/in/ashmit-shukla-895813227/" className="hover:underline">
+              Ashmit Shukla
+            </a> .
                 </p>
               </div>
             </div>
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                Company
+              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-700">
+              About
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
+                    to="https://www.linkedin.com/in/ashmit-shukla-895813227/"
                   >
-                    Features
+                    LinkedIn
+                  </Link>
+                </li>
+                <li className="mb-4">
+                <Link
+                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    to="https://github.com/Ashmit7465"
+                  >
+                    Github
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
+                    to="https://www.instagram.com/ashmit._.7465/"
                   >
-                    Pricing
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
-                  >
-                    Affiliate Program
+                    Instagram
                   </Link>
                 </li>
                 <li>
@@ -54,7 +56,7 @@ function Footer() {
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/"
                   >
-                    Press Kit
+                    Discord
                   </Link>
                 </li>
               </ul>
@@ -62,8 +64,8 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                Support
+              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-700">
+                Navigation
               </h3>
               <ul>
                 <li className="mb-4">
@@ -71,31 +73,23 @@ function Footer() {
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/"
                   >
-                    Account
+                    Home
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
+                    to="/login"
                   >
-                    Help
+                    Login
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
+                    to="/signup"
                   >
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
-                  >
-                    Customer Support
+                    Sign Up
                   </Link>
                 </li>
               </ul>
@@ -103,7 +97,7 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-700">
                 Legals
               </h3>
               <ul>
@@ -121,14 +115,6 @@ function Footer() {
                     to="/"
                   >
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
-                  >
-                    Licensing
                   </Link>
                 </li>
               </ul>
