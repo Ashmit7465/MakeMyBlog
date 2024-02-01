@@ -28,6 +28,10 @@ export default function PostForm({ post }) {
         if (post && post.featuredImage) {
           appwriteService.deleteFile(post.featuredImage);
         }
+        else {
+          console.error("File upload failed");
+          return;
+        }
       }
     }
 
