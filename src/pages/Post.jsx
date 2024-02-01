@@ -4,6 +4,7 @@ import appwriteService from "../appwrite/config";
 import { Button, Container } from "../components";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Post() {
   const [post, setPost] = useState(null);
@@ -14,12 +15,26 @@ export default function Post() {
 
   const isAuthor = post && userData ? post.userId === userData.$id : false;
 
+  // useEffect(() => {
+  //   if (slug) {
+  //     appwriteService.getPost(slug).then((post) => {
+  //       if (post) setPost(post);
+  //       else navigate("/");
+  //     });
+  //   } else navigate("/");
+  // }, [slug, navigate]);
+
   useEffect(() => {
     if (slug) {
-      appwriteService.getPost(slug).then((post) => {
-        if (post) setPost(post);
-        else navigate("/");
-      });
+      appwriteService.getPost(slug)
+        .then((post) => {
+          if (post) setPost(post);
+          else navigate("/");
+        })
+        .catch((error) => {
+          console.error("Error fetching post:", error);
+          navigate("/");
+        });
     } else navigate("/");
   }, [slug, navigate]);
 
