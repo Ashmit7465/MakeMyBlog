@@ -15,26 +15,12 @@ export default function Post() {
 
   const isAuthor = post && userData ? post.userId === userData.$id : false;
 
-  // useEffect(() => {
-  //   if (slug) {
-  //     appwriteService.getPost(slug).then((post) => {
-  //       if (post) setPost(post);
-  //       else navigate("/");
-  //     });
-  //   } else navigate("/");
-  // }, [slug, navigate]);
-
   useEffect(() => {
     if (slug) {
-      appwriteService.getPost(slug)
-        .then((post) => {
-          if (post) setPost(post);
-          else navigate("/");
-        })
-        .catch((error) => {
-          console.error("Error fetching post:", error);
-          navigate("/");
-        });
+      appwriteService.getPost(slug).then((post) => {
+        if (post) setPost(post);
+        else navigate("/");
+      });
     } else navigate("/");
   }, [slug, navigate]);
 
