@@ -19,7 +19,7 @@ function AllPosts() {
       <Container>
         {posts.length === 0 ? (
           <div className="flex items-center justify-center h-screen">
-            <div className="text-center">
+            <div className="text-center border-solid border-2 border-black/10 pt-10 pl-10 pr-10 pb-10">
               <h1 className="text-4xl font-bold mb-7">
                 !! Welcome to the posts section of MakeMyBlog !!
               </h1>

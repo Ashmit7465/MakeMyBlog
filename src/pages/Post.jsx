@@ -45,11 +45,11 @@ export default function Post() {
           {isAuthor && (
             <div className="absolute right-6 top-6">
               <Link to={`/edit-post/${post.$id}`}>
-                <Button bgColor="bg-green-500" className="mr-3">
+                <Button bgColor="bg-cream" className="mr-3">
                   Edit
                 </Button>
               </Link>
-              <Button bgColor="bg-red-500" onClick={deletePost}>
+              <Button bgColor="bg-mainClr" onClick={deletePost}>
                 Delete
               </Button>
             </div>
@@ -58,9 +58,9 @@ export default function Post() {
         <div className="w-full mb-6">
           <h1 className="text-2xl font-bold">{post.title}</h1>
         </div>
-        
+
         {/* Check if post.content is a valid string before parsing */}
-        {typeof post.content === 'string' ? (
+        {typeof post.content === "string" ? (
           <div className="browser-css">{parse(post.content)}</div>
         ) : (
           <p>Error: Invalid content format</p>

@@ -4,7 +4,7 @@ import Logo from "../Logo";
 
 function Footer() {
   return (
-    <section className="relative overflow-hidden py-10 bg-gray-400 border border-t-2 border-t-black">
+    <section className="relative overflow-hidden py-10 bg-flexblue border border-t-2 border-t-black">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
@@ -27,7 +27,7 @@ function Footer() {
               About
               </h3>
               <ul>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="https://www.linkedin.com/in/ashmit-shukla-895813227/"
@@ -35,7 +35,7 @@ function Footer() {
                     LinkedIn
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                 <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="https://github.com/Ashmit7465"
@@ -43,7 +43,7 @@ function Footer() {
                     Github
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="https://www.instagram.com/ashmit._.7465/"
@@ -53,7 +53,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium text-gray-900 hover:text-gray-700 hover:underline"
                     to="/"
                   >
                     Discord
@@ -68,7 +68,7 @@ function Footer() {
                 Navigation
               </h3>
               <ul>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/"
@@ -76,7 +76,7 @@ function Footer() {
                     Home
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/login"
@@ -84,7 +84,7 @@ function Footer() {
                     Login
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/signup"
@@ -101,7 +101,7 @@ function Footer() {
                 Legals
               </h3>
               <ul>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/"
@@ -109,7 +109,7 @@ function Footer() {
                     Terms &amp; Conditions
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 hover:underline">
                   <Link
                     className=" text-base font-medium text-gray-900 hover:text-gray-700"
                     to="/"

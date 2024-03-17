@@ -16,7 +16,7 @@ function Home() {
   if (posts.length === 0) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
+        <div className="text-center border-solid border-2 border-black/10 pl-10 pr-10 pt-10 pb-10">
           <h1 className="text-5xl font-bold mb-7">!! Welcome to MakeMyBlog !!</h1>
           <p className="text-3xl font-bold mb-6">Please login to read others' posts or to create your own new post</p>
           <p className="text-xl mb-4">

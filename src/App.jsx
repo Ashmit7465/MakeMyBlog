@@ -5,6 +5,7 @@ import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
 import { Footer, Header } from "./components";
 import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,8 +24,13 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
+  // useEffect(() => {
+  //   document.querySelector('html').classList.remove("light", "dark")
+  //   document.querySelector('html').classList.add(themeMode);
+  // }, [themeMode]);
+
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
+    <div className="min-h-screen flex flex-wrap content-between bg-peckblue">
       <div className="w-full block">
         <Header />
         <main>
